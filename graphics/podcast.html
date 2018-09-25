@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Podcast</title>
+	<link rel="stylesheet" href="../bower_components/lato-font/css/lato-font.css">
+	<link rel="import" href="elements/discord-voice/discord-voice.html">
+	<link rel="import" href="../shared/imports/gsap.html">
+
+	<custom-style>
+		<style>
+			body {
+				width: 1280px;
+				height: 720px;
+				font-family: Lato;
+				background-image: url("img/backgrounds/simple-bg.jpg");
+			}
+			discord-voice {
+				position: absolute;
+				z-index: 10;
+				bottom: 50px;
+				--discord-voice-fontWeight: 600;
+				--discord-voice-font: 24px;
+				--discord-voice-font: Lato;
+				/*These three lines let you control the text in the discord overlay*/
+			}
+			p {
+				color: white;
+				font-family: Lato;
+				font-size: 24px;
+			}
+		</style>
+	</custom-style>
+
+</head>
+<body>
+	<p>
+		Hello, I'm your podcast graphic!
+		I'm where you put the graphics you want to run in your broadcast software!
+	</p>
+	<p>Have fun!</p>
+
+	<discord-voice tableWidth="1280" rowWidth="1200" columnsperline="4"></discord-voice>
+	<!--These html parameters let you control the discord voice overlay. ColumsperLine controls how many voice members are shown in one row. The other elements control the overall size of the layout-->
+
+
+	<script>
+		window.addEventListener('DOMContentLoaded', () => {
+			TweenLite.to(document.body, 0.333, {
+				opacity: 1,
+				ease: Power1.easeOut
+			});
+		});
+	</script>
+</body>
+</html>

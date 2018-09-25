@@ -1,0 +1,32 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+
+	"properties": {
+
+		"discord": {
+			"type": ["object", "null"],
+			"properties": {
+				"token": {
+					"type": "string",
+					"description": "The Token for the Discord Bot"
+				},
+				"serverID": {
+					"type": "string",
+					"description": "The server ID of the discord server"
+				},
+				"commandChannelID": {
+					"type": "string",
+					"description": "The channel ID of the channel for commands"
+				},
+				"voiceChannelID": {
+					"type": "string",
+					"description": "The ID of the tracked voice channel"
+				}
+			},
+			"required": ["token", "serverID", "commandChannelID", "voiceChannelID"],
+			"default": null
+		}
+	},
+	"required": ["discord"]
+}
