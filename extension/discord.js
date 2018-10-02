@@ -89,7 +89,7 @@ function UpdateCommentaryChannelMembers()
 			{
 				speakStatus = false;
 			}
-			log.info(voiceMember.displayName " has changed their speaking status: " + speakStatus);
+			log.info(voiceMember.displayName + " has changed their speaking status: " + speakStatus);
 			newVoiceArray.push({id: voiceMember.user.id, name: voiceMember.displayName, avatar: userAvatar, isSpeaking: speakStatus});
 		}
 	});
